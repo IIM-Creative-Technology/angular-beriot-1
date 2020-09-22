@@ -1,7 +1,10 @@
-<div class="content">
-  <div class="card highlight-card">
-    <span>{{ title }} app is running</span>
-  </div>
+<div class="spec">
+  <span>Bonjour {{ title }} </span>
+  <br />
+  <input #text (keyup.enter)="setTitle(text.value)" />
+  <br />
+  <button (click)="setTitle(text.value)">click me</button>
+  <app-slider></app-slider>
 </div>
 
 <router-outlet></router-outlet>
